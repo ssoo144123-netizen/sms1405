@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="جستجو در پیامک‌ها یا شماره"
+        android:textSize="14sp" />
+
+    <Spinner
+        android:id="@+id/spinnerFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="انتخاب همه"
+            android:textSize="11sp" android:onClick="onSelectAll" />
+        <Button android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="حذف"
+            android:textSize="11sp" android:onClick="onDelete" />
+        <Button android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="خوانده"
+            android:textSize="11sp" android:onClick="onMarkRead" />
+        <Button android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="نخوانده"
+            android:textSize="11sp" android:onClick="onMarkUnread" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="جدید"
+            android:textSize="11sp" android:onClick="onNewChat" />
+        <Button android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="ذخیره"
+            android:textSize="11sp" android:onClick="onSave" />
+        <Button android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="پیش‌فرض"
+            android:textSize="11sp" android:onClick="onSetDefault" />
+        <Button android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="تنظیمات"
+            android:textSize="11sp" android:onClick="onSettings" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textSize="13sp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

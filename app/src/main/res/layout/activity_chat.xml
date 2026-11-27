@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <EditText
+        android:id="@+id/edtFind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="جستجو در این گفتگو"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="انتخاب همه"
+            android:textSize="11sp" android:onClick="onSelectAll" />
+        <Button android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="حذف"
+            android:textSize="11sp" android:onClick="onDelete" />
+        <Button android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="خوانده"
+            android:textSize="11sp" android:onClick="onMarkRead" />
+        <Button android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="ذخیره"
+            android:textSize="11sp" android:onClick="onSave" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="بلاک این شماره"
+        android:textSize="12sp"
+        android:onClick="onBlock" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="تماس"
+        android:textSize="12sp"
+        android:onClick="onCall" />
+
+    <ListView
+        android:id="@+id/listMsgs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:transcriptMode="alwaysScroll" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/edtBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="متن پیامک"
+            android:textSize="14sp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ارسال"
+            android:onClick="onSend" />
+    </LinearLayout>
+
+</LinearLayout>
